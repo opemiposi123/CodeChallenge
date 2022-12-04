@@ -36,10 +36,15 @@ namespace CodeChallenge
                         newB += firstword[i] + "" + secondword[i];
                     }
 
-                    Console.WriteLine($"{newA} {newB}");
                 }
-                string reversed = String.Join(a, "", b);
-                Console.WriteLine(reversed);
+                var add = $"{newB}{newA}";
+                char[] charArray = add.ToCharArray();
+                string reverse = "";
+                for (int j = charArray.Length - 1; i > -1; i--)
+                {
+                    reverse += charArray[i];
+                }
+                Console.WriteLine(reverse);
 
             }
             catch (Exception ex)
